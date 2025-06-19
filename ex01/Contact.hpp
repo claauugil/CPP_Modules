@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/17 16:27:11 by claudia           #+#    #+#             */
-/*   Updated: 2025/06/17 17:07:29 by claudia          ###   ########.fr       */
+/*   Updated: 2025/06/18 16:04:13 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ class Contact{
         std::string get_secret(void)const;
         void        set_fst_name(std::string str);
         void        set_lname(std::string str);
-        void        set_nick_name(std::string str);
+        void        set_nickname(std::string str);
         void        set_phone_num(std::string str);
         void        set_secret(std::string str);
 };

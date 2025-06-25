@@ -20,5 +20,3 @@ fclean: clean
 	@echo "fully cleaned"
 
 re: fclean all
-
-re: fclean all

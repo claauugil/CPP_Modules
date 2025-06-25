@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 16:07:07 by claudia           #+#    #+#             */
-/*   Updated: 2025/06/23 17:49:49 by claudia          ###   ########.fr       */
+/*   Updated: 2025/06/24 17:43:38 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,6 @@ void Phonebook:: search(void)
 
 void Phonebook::print(Contact contact)
 {
-    std::cout <<std::endl << "Asking contact information..." << std::endl;
     if (!contact.get_fst_name().size())
     {
         std::cout << "Failed to get information about this contact";

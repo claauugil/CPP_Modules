@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/23 16:59:35 by claudia           #+#    #+#             */
-/*   Updated: 2025/06/24 17:37:48 by claudia          ###   ########.fr       */
+/*   Updated: 2025/07/01 19:56:33 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main (void)
 
     while (input != "EXIT")
     {
-        std::cout << "Enter a command > ";
+        std::cout << "Enter a command: ADD, SEARCH, EXIT > ";
         std::getline(std::cin, input);
         if (input == "ADD")
             phone.add();

@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Phonebook_utils.hpp                                :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/21 19:10:05 by claudia           #+#    #+#             */
-/*   Updated: 2025/06/24 17:39:41 by claudia          ###   ########.fr       */
+/*   Created: 2025/07/02 18:47:21 by claudia           #+#    #+#             */
+/*   Updated: 2025/07/02 19:02:52 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_UTILS_HPP
+#include "Zombie.hpp"
 
-#define PHONEBOOK_UTILS_HPP
+Zombie::Zombie(std::string name)
+{ 
+    this->_name = name;
+    std::cout << "Zombie " << this->_name << " created" << std:: endl;
+}
 
-#include <iostream>
-#include "Contact.hpp"
+Zombie::~Zombie (void)
+{
+    std::cout << "Zombie " << this->_name << " destroyed" << std:: endl;
+}
 
-std::string fix_spaces(int n);
-std::string fix_width(std::string str, long unsigned max);
-
-int show_table(Contact contacts[8]);
-
-#endif
+void Zombie::announce()
+{
+    std::cout << this->_name << "BraiiiiiiinnnzzzZ..." << std::endl;
+}

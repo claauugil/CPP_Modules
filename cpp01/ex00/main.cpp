@@ -5,31 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/23 16:59:35 by claudia           #+#    #+#             */
-/*   Updated: 2025/06/24 17:37:48 by claudia          ###   ########.fr       */
+/*   Created: 2025/07/02 19:20:19 by claudia           #+#    #+#             */
+/*   Updated: 2025/07/02 19:30:35 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Phonebook.hpp"
+#include "Zombie.hpp"
 
-int main (void)
+Zombie *newZombie(std::string name);
+void    randomChump(std::string name);
+
+int main ()
 {
-    Phonebook   phone;
-    std::string input;
-
-    while (input != "EXIT")
-    {
-        std::cout << "Enter a command > ";
-        std::getline(std::cin, input);
-        if (input == "ADD")
-            phone.add();
-        else if (input == "SEARCH")
-            phone.search();
-        if (std::cin.eof())
-        {
-            std::cout << std::endl;
-            return (0);
-        }
-    }
+    Zombie *heapZombie = newZombie("Heapy");
+    heapZombie->announce();
+    
+    randomChump("Stacky");
+    delete heapZombie;
     return (0);
 }

@@ -1,5 +1,5 @@
-NAME = horde
-SRC =  Zombie.cpp zombieHorde.cpp main.cpp
+NAME = weapon
+SRC = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

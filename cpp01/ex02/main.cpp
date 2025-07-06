@@ -5,26 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/04 12:37:27 by claudia           #+#    #+#             */
-/*   Updated: 2025/07/06 14:34:30 by claudia          ###   ########.fr       */
+/*   Created: 2025/07/06 15:20:37 by claudia           #+#    #+#             */
+/*   Updated: 2025/07/06 16:23:27 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <iostream>
 
-Zombie *zombieHorde(int N, std::string name);
-
-int	main(void)
+int main ()
 {
-	Zombie	*horde;
-	int		N = 3;
-
-	horde = zombieHorde(N, "Horde");
- 	for (int i = 0; i < N; i++)
-	{
-		std::cout << "Zombie " << i << ": ";
-		horde[i].announce();
-	}
-	delete[] horde; //for leaks when we use new
-	return (0);
+    std::string msg = "HI THIS IS BRAIN";
+    std::string *stringPTR = &msg;
+    std::string &stringREF = msg;
+    std::cout << "string address: " << &msg << std::endl;
+	std::cout << "stringPTR address: " << stringPTR << std::endl;
+	std::cout << "stringREF address: " << &stringREF << std::endl;
+    std::cout << "string: " << msg << std::endl;
+	std::cout << "stringPTR string: " << *stringPTR << std::endl;
+	std::cout << "stringREF string: " << stringREF << std::endl;
 }

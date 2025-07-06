@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 18:47:21 by claudia           #+#    #+#             */
-/*   Updated: 2025/07/04 12:53:10 by claudia          ###   ########.fr       */
+/*   Updated: 2025/07/06 14:16:57 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,13 @@ Zombie::Zombie(std::string name)
               << std::endl;
 }
 
-/*Zombie::Zombie(void)
+Zombie::Zombie(void)
 {
-    this->_name = "(null)";
     std::cout << "\033[1;36m"
-    << "Zombie " << this->_name << " created"
+    << "Zombie created"
     << "\033[0m"
     << std::endl;
-}*/
+}
 
 Zombie::~Zombie(void)
 {

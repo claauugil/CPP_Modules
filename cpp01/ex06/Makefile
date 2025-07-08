@@ -1,10 +1,10 @@
-NAME = harlFIlter
+NAME = harlFilter
 SRC = main.cpp Harl.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 
 
 GREEN = \033[1;32m

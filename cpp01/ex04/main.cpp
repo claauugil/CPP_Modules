@@ -6,12 +6,12 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 19:40:11 by claudia           #+#    #+#             */
-/*   Updated: 2025/07/06 20:26:44 by claudia          ###   ########.fr       */
+/*   Updated: 2025/07/07 15:44:34 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <fstream> // file opening
+#include <fstream>
 
 
 int replace (char **argv, std::string str)
@@ -36,7 +36,6 @@ int replace (char **argv, std::string str)
     outfile.close();
     return (0);
 }
-
 
 int main(int argc, char **argv)
 {

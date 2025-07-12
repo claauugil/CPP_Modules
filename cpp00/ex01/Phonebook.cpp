@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
+/*   By: cgil <cgil@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 16:07:07 by claudia           #+#    #+#             */
-/*   Updated: 2025/07/01 16:45:30 by claudia          ###   ########.fr       */
+/*   Updated: 2025/07/02 15:53:58 by cgil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void Phonebook::add(void)
                 << this->_contacts[this->_index % 8].get_fst_name() << std::endl;
     while (true)
     {
-        std::cout << "Enter a first name: ";
+        std::cout << "\033[1;32mEnter a first name:\033[0m ";
         if (!std::getline(std::cin, str) || str.empty() || !checkIsAlpha(str))
         {
             if (std::cin.eof()) return;
@@ -65,7 +65,7 @@ void Phonebook::add(void)
     }
     while (true)
     {
-        std::cout << "Enter a last name: ";
+        std::cout << "\033[1;32mEnter a last name:\033[0m ";
         if (!std::getline(std::cin, str) || str.empty() || !checkIsAlpha(str))
         {
             if (std::cin.eof()) return;
@@ -77,7 +77,7 @@ void Phonebook::add(void)
     }
     while (true)
     {
-        std::cout << "Enter a nickname: ";
+        std::cout << "\033[1;32mEnter a nickname:\033[0m ";
         if (!std::getline(std::cin, str) || str.empty() || !checkIsAlpha(str))
         {
             if (std::cin.eof()) return;
@@ -89,7 +89,7 @@ void Phonebook::add(void)
     }
     while (true)
     {
-        std::cout << "Enter a phone number: ";
+        std::cout << "\033[1;32mEnter a phone number:\033[0m ";
         if (!std::getline(std::cin, str) || str.empty() || !checkIsNumeric(str))
         {
             if (std::cin.eof()) return;
@@ -101,7 +101,7 @@ void Phonebook::add(void)
     }
     while (true)
     {
-        std::cout << "Enter the darkest secret: ";
+        std::cout << "\033[1;32mEnter the darkest secret:\033[0m ";
         if (!std::getline(std::cin, str) || str.empty() || !checkIsAlpha(str))
         {
             if (std::cin.eof()) return;
@@ -152,11 +152,11 @@ void Phonebook::print(Contact contact)
     if (!contact.get_fst_name().size())
     {
         std::cout << "Failed to get information about this contact";
-        return ;
+        return;
     }
-    std::cout << "First Name: " << contact.get_fst_name() << std::endl;
-    std::cout << "Last Name: " << contact.get_lst_name() << std::endl;
-    std::cout << "Nickname: " << contact.get_nickname() << std::endl;
-    std::cout << "Phone Number: " << contact.get_phone_num() << std::endl;
-    std::cout << "Darkest Secret: " << contact.get_secret() << std::endl;
+    std::cout << "\033[1;32mFirst Name: \033[0m" << contact.get_fst_name() << std::endl;
+    std::cout << "\033[1;32mLast Name: \033[0m" << contact.get_lst_name() << std::endl;
+    std::cout << "\033[1;32mNickname: \033[0m" << contact.get_nickname() << std::endl;
+    std::cout << "\033[1;32mPhone Number: \033[0m" << contact.get_phone_num() << std::endl;
+    std::cout << "\033[1;32mDarkest Secret: \033[0m" << contact.get_secret() << std::endl;
 }

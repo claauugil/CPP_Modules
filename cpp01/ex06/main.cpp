@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
+/*   By: cgil <cgil@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 17:10:47 by claudia           #+#    #+#             */
-/*   Updated: 2025/07/08 16:26:48 by claudia          ###   ########.fr       */
+/*   Updated: 2025/07/12 15:17:32 by cgil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void harl_switch(char *argv, Harl & h)
     {
         case 0:
             h.complain("DEBUG");
-            /* fall through */ //so that by not putting a break it does not give an error
+            /* fall through */ //avoid break error
         case 1:
             h.complain("INFO");
             /* fall through */

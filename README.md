@@ -1,6 +1,6 @@
 
 # 🧩 C++ - Módulo 00
-namespaces, clases, funciones miembro, iostream, listas de inicialización, static, const.
+**Tema:** namespaces, clases, funciones miembro, iostream, listas de inicialización, static, const.
 Norma: C++98 – sin printf, malloc/free, using namespace, STL (hasta módulo 08).
 
 ## ex00 – Megaphone

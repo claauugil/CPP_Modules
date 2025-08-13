@@ -54,9 +54,6 @@ Agenda con 8 contactos máx.
 
 ---
 # 🧩 C++ - Módulo 03
-
----
-# 🧩 C++ - Módulo 03
 **Tema:** Herencia, clases derivadas y múltiples herencias.  
 
 | Ejercicio | Nombre | Descripción |

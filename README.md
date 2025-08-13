@@ -52,3 +52,17 @@ Agenda con 8 contactos máx.
 - **ex02:** Sobrecarga operadores comparación, aritméticos,  
   y pre/post incremento/decremento. Métodos estáticos `min` y `max`.
 
+---
+# 🧩 C++ - Módulo 03
+
+---
+# 🧩 C++ - Módulo 03
+**Tema:** Herencia, clases derivadas y múltiples herencias.  
+
+| Ejercicio | Nombre | Descripción |
+|-----------|--------|-------------|
+| 🤖 **ex00** | Aaaaand... OPEN! | Clase `ClapTrap` con atributos `name`, `hit points`, `energy points` y `attack damage`. Métodos: `attack()`, `takeDamage()`, `beRepaired()`. Práctica de constructores, destructores y mensajes por consola. |
+| 🛡️ **ex01** | Serena, my love! | Clase `ScavTrap` que hereda de `ClapTrap`. Hit points y energy points distintos. Añade método especial `guardGate()` y muestra mensajes distintos de construcción y ataque. |
+| 💥 **ex02** | Repetitive work | Clase `FragTrap` que hereda de `ClapTrap`. Hit points y energy points aumentados. Añade método especial `highFivesGuys()` y mensajes propios de construcción/ataque. |
+| 💎 **ex03** | Now it’s weird! | Clase `DiamondTrap` que hereda de **FragTrap** y **ScavTrap**. Mezcla atributos y métodos de ambos padres, añade método especial `whoAmI()` que muestra su nombre y el de ClapTrap. Maneja correctamente la creación de la instancia ClapTrap única. |
+

@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 17:15:40 by claudia           #+#    #+#             */
-/*   Updated: 2025/08/13 15:46:58 by claudia          ###   ########.fr       */
+/*   Updated: 2025/08/14 17:32:34 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ ScavTrap::ScavTrap(ScavTrap const &copy) : ClapTrap(copy)
 
 ScavTrap::~ScavTrap(void)
 {
-    std::cout << "ScavTrap from ClapTrap " << this->getName() << " was destroyed" << std::endl;
+    std::cout << RED << "ScavTrap from ClapTrap " << this->getName() << " was destroyed" << RESET << std::endl;
 }
 
 ScavTrap &ScavTrap::operator=(ScavTrap const &copy)

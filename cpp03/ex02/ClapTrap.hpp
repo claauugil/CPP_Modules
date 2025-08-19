@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/01 16:04:52 by claudia           #+#    #+#             */
-/*   Updated: 2025/08/08 13:29:21 by claudia          ###   ########.fr       */
+/*   Updated: 2025/08/19 12:06:30 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 
 class ClapTrap
 {
-   private:
+   protected:
         std::string  _name;
         int          _hitPoints;
         int          _energyPoints;

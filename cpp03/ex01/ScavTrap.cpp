@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 17:15:40 by claudia           #+#    #+#             */
-/*   Updated: 2025/08/14 17:32:34 by claudia          ###   ########.fr       */
+/*   Updated: 2025/08/19 12:45:16 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,23 @@ ScavTrap &ScavTrap::operator=(ScavTrap const &copy)
     std::cout << "Assignment operator for ScavTrap called." << std::endl;
     ClapTrap::operator=(copy);
     return (*this);
+}
+
+void ScavTrap:: attack(const std::string& target)
+{
+    if (_energyPoints > 0 && _hitPoints > 0)
+    {
+        std::cout << YELLOW << "ScavTrap " << _name  <<" attacks " << target
+            << ", causing " << _attackDamage << " points of damage!"
+                << RESET << std::endl;
+                _energyPoints--;
+    }
+    else
+    {
+        std::cout << "ScavTrap " << _name << " can't attack! (HP: "
+            << _hitPoints << ", Energy: " << _energyPoints << ")"
+            << std::endl;
+    }
 }
 
 void ScavTrap::guardGate(void)

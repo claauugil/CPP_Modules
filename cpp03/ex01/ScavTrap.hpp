@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 17:09:28 by claudia           #+#    #+#             */
-/*   Updated: 2025/08/08 17:28:10 by claudia          ###   ########.fr       */
+/*   Updated: 2025/08/19 12:22:10 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class ScavTrap : public ClapTrap
         ScavTrap &operator=(ScavTrap const &copy);
         
         void guardGate(void);
+        void attack(const std::string& target);
 };
 
 #endif

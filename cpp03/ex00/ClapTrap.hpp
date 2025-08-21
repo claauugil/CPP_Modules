@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/01 16:04:52 by claudia           #+#    #+#             */
-/*   Updated: 2025/08/08 13:29:21 by claudia          ###   ########.fr       */
+/*   Updated: 2025/08/21 10:48:49 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ class ClapTrap
         ClapTrap &operator=(const ClapTrap &copy);
         ~ClapTrap();
         
-        // actions
         void attack(const std::string& target);
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);

@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 17:15:40 by claudia           #+#    #+#             */
-/*   Updated: 2025/08/19 12:45:16 by claudia          ###   ########.fr       */
+/*   Updated: 2025/08/21 10:49:41 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ ScavTrap::ScavTrap(void) : ClapTrap("Unnamed ScavTrap")
     this->setAttackDamage(20);
     std::cout << "ScavTrap from ClapTrap " << this->getName() << " created with default constructor" << std::endl;
 }
-
 ScavTrap::ScavTrap(std::string const &name) : ClapTrap(name)
 {
     this->setHitPoints(100);

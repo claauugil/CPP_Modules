@@ -63,3 +63,12 @@ Agenda con 8 contactos máx.
 | 💥 **ex02** | Repetitive work | Clase `FragTrap` que hereda de `ClapTrap`. Hit points y energy points aumentados. Añade método especial `highFivesGuys()` y mensajes propios de construcción/ataque. |
 | 💎 **ex03** | Now it’s weird! | Clase `DiamondTrap` que hereda de **FragTrap** y **ScavTrap**. Mezcla atributos y métodos de ambos padres, añade método especial `whoAmI()` que muestra su nombre y el de ClapTrap. Maneja correctamente la creación de la instancia ClapTrap única. |
 
+# 🧩 C++ - Módulo 04
+**Tema:** Polimorfismo por subtipos, clases abstractas e interfaces.  
+
+| Ejercicio | Nombre | Descripción |
+|-----------|--------|-------------|
+| 🐶🐱 **ex00** | Polymorphism | Clase base `Animal` con atributo protegido `type` y método virtual `makeSound()`. Clases derivadas `Dog` y `Cat` implementan sonidos específicos. Incluye `WrongAnimal` y `WrongCat` para demostrar el error al no usar funciones virtuales. |
+| 🧠 **ex01** | I don’t want to set the world on fire | Implementa clase `Brain` con array de 100 `std::string`. `Dog` y `Cat` contienen un `Brain*` privado. Se gestionan con `new`/`delete`. Se prueban destructores correctos, gestión de memoria y **deep copy**. |
+| 🚫 **ex02** | Abstract class | La clase `Animal` ya no debe poder instanciarse directamente. Se convierte en clase abstracta, asegurando que solo clases derivadas (`Dog`, `Cat`) puedan usarse. |
+

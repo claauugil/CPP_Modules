@@ -83,3 +83,14 @@ Agenda con 8 contactos máx.
 | 📝 **ex01** | Form | Clase `Form` que puede ser firmada por un `Bureaucrat` si su grado es suficiente. Practica el uso de **atributos const**, validación de rangos y manejo de excepciones. Relación entre clases sin herencia. |
 | 📄 **ex02** | AForm | Versión abstracta de `Form`. Introduce **clases abstractas** y **polimorfismo**. Implementa `execute()` con comprobaciones comunes y formularios concretos con comportamiento específico. |
 | 🏭 **ex03** | Intern | Clase fábrica `Intern` que crea formularios dinámicamente según un nombre. Practica el **factory pattern**, uso de punteros a la clase base `AForm` y manejo de errores cuando el formulario no existe. |
+
+# 🧩 C++ - Módulo 06  
+**Tema:** Casts en C++, conversión de tipos, RTTI y serialización.  
+Norma: C++98.
+
+| Ejercicio | Nombre | Descripción |
+|-----------|--------|-------------|
+| 🔢 **ex00** | Scalar Converter | Clase no instanciable `ScalarConverter` con un método estático `convert()` que recibe un literal en forma de `string` y lo convierte a `char`, `int`, `float` y `double`. Maneja **pseudo-literales** (`nan`, `inf`, `-inf`, con y sin `f`), conversiones imposibles y valores no imprimibles. Practica detección de tipos y **casts explícitos**. |
+| 🔐 **ex01** | Serialization | Clase estática `Serializer` que convierte un puntero a un entero (`uintptr_t`) y viceversa. Introduce la **serialización básica**, el uso de `reinterpret_cast` y la diferencia entre representación y valor. Incluye una estructura `Data` no vacía para las pruebas. |
+| 🧬 **ex02** | Identify real type | Jerarquía con una clase base `Base` y clases derivadas `A`, `B` y `C`. Implementa funciones que identifican el tipo real del objeto usando **`dynamic_cast`** con punteros y referencias, sin `typeid`. Demuestra **RTTI**, polimorfismo y la necesidad de un destructor virtual en la clase base. |
+

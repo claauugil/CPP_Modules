@@ -72,3 +72,14 @@ Agenda con 8 contactos máx.
 | 🧠 **ex01** | I don’t want to set the world on fire | Implementa clase `Brain` con array de 100 `std::string`. `Dog` y `Cat` contienen un `Brain*` privado. Se gestionan con `new`/`delete`. Se prueban destructores correctos, gestión de memoria y **deep copy**. |
 | 🚫 **ex02** | Abstract class | La clase `Animal` ya no debe poder instanciarse directamente. Se convierte en clase abstracta, asegurando que solo clases derivadas (`Dog`, `Cat`) puedan usarse. |
 
+---
+
+# 🧩 C++ - Módulo 05  
+**Tema:** Excepciones, clases abstractas, herencia y control de acceso.
+
+| Ejercicio | Nombre | Descripción |
+|-----------|--------|-------------|
+| 🧑‍💼 **ex00** | Bureaucrat | Clase `Bureaucrat` con `name` constante y `grade` (1 = más alto, 150 = más bajo). Implementa incremento/decremento de grado con **excepciones** (`GradeTooHighException`, `GradeTooLowException`). Introduce `try`, `throw` y `catch` heredando de `std::exception`. |
+| 📝 **ex01** | Form | Clase `Form` que puede ser firmada por un `Bureaucrat` si su grado es suficiente. Practica el uso de **atributos const**, validación de rangos y manejo de excepciones. Relación entre clases sin herencia. |
+| 📄 **ex02** | AForm | Versión abstracta de `Form`. Introduce **clases abstractas** y **polimorfismo**. Implementa `execute()` con comprobaciones comunes y formularios concretos con comportamiento específico. |
+| 🏭 **ex03** | Intern | Clase fábrica `Intern` que crea formularios dinámicamente según un nombre. Practica el **factory pattern**, uso de punteros a la clase base `AForm` y manejo de errores cuando el formulario no existe. |

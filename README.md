@@ -1,25 +1,12 @@
-
 # 🧩 C++ - Módulo 00
-**Tema:** namespaces, clases, funciones miembro, iostream, listas de inicialización, static, const.
-Norma: C++98 – sin printf, malloc/free, using namespace, STL (hasta módulo 08).
 
-## ex00 – Megaphone
+**Tema:** namespaces, clases, funciones miembro, iostream, listas de inicialización, static, const.  
+**Norma:** C++98 – sin printf, malloc/free, using namespace, STL (hasta módulo 08).
 
-Programa que imprime los argumentos en mayúsculas.
-* Sin argumentos:
-```bash
-* LOUD AND UNBEARABLE FEEDBACK NOISE *
-```
-
-## ex01 – My Awesome PhoneBook
-
-Agenda con 8 contactos máx.
-
-`ADD`: añadir contacto(campos no vacíos)
-
-`SEARCH`: lista formateada + ver detalles por índice
-
-`EXIT`: salir
+| Ejercicio | Nombre | Descripción |
+|-----------|--------|-------------|
+| 📣 **ex00** | Megaphone | Programa que imprime los argumentos en mayúsculas.<br>- Sin argumentos: "* LOUD AND UNBEARABLE FEEDBACK NOISE *" |
+| 📒 **ex01** | My Awesome PhoneBook | Agenda con 8 contactos máx.<br>- ADD: añadir contacto (campos no vacíos)<br>- SEARCH: lista formateada + ver detalles por índice<br>- EXIT: salir |
 
 ---
 
@@ -41,16 +28,11 @@ Agenda con 8 contactos máx.
 
 **Tema:** Polimorfismo ad-hoc, sobrecarga de operadores y forma canónica ortodoxa.
 
-### Ejercicios 📚
-
-- **ex00:** Clase `Fixed` básica con constructor, copia, asignación y destructor.  
-  Guarda un número fijo con 8 bits fraccionales.
-
-- **ex01:** Añade constructores para int y float, convierte Fixed a float/int,  
-  y sobrecarga operador `<<` para imprimir.
-
-- **ex02:** Sobrecarga operadores comparación, aritméticos,  
-  y pre/post incremento/decremento. Métodos estáticos `min` y `max`.
+| Ejercicio | Nombre | Descripción |
+|-----------|--------|-------------|
+| **ex00** | Fixed | Clase `Fixed` básica con constructor, copia, asignación y destructor.<br>Guarda un número fijo con 8 bits fraccionales. |
+| 🔢 **ex01** | Fixed con float/int | Añade constructores para int y float, convierte Fixed a float/int,<br>y sobrecarga operador `<<` para imprimir. |
+| ➕ **ex02** | Operadores sobrecargados | Sobrecarga operadores de comparación y aritméticos,<br>pre/post incremento/decremento. Métodos estáticos `min` y `max`. |
 
 ---
 # 🧩 C++ - Módulo 03

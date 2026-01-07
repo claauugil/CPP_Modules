@@ -1,0 +1,32 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   iter.hpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cgil <cgil@student.42.fr>                  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/06 15:51:00 by cgil              #+#    #+#             */
+/*   Updated: 2026/01/06 16:22:41 by cgil             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef ITER_HPP
+# define ITER_HPP
+
+#include <cstddef> 
+
+template <typename T, typename F>
+void iter(T* array, const size_t length, F func)
+{
+    for (size_t i = 0; i < length; i++)
+        func(array[i]);
+}
+
+template <typename T, typename F>
+void iter(const T* array, const size_t length, F func)
+{
+    for (size_t i = 0; i < length; i++)
+        func(array[i]);
+}
+
+#endif

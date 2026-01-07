@@ -94,3 +94,13 @@ Norma: C++98.
 | 🔐 **ex01** | Serialization | Clase estática `Serializer` que convierte un puntero a un entero (`uintptr_t`) y viceversa. Introduce la **serialización básica**, el uso de `reinterpret_cast` y la diferencia entre representación y valor. Incluye una estructura `Data` no vacía para las pruebas. |
 | 🧬 **ex02** | Identify real type | Jerarquía con una clase base `Base` y clases derivadas `A`, `B` y `C`. Implementa funciones que identifican el tipo real del objeto usando **`dynamic_cast`** con punteros y referencias, sin `typeid`. Demuestra **RTTI**, polimorfismo y la necesidad de un destructor virtual en la clase base. |
 
+# 🧩 C++ - Módulo 07  
+**Tema:** Templates en C++  
+Norma: C++98 – sin printf, malloc/free, using namespace, STL (hasta módulo 08).  
+
+| Ejercicio | Nombre | Descripción |
+|-----------|--------|-------------|
+| 🔄 **ex00** | Start with a few functions | Implementa funciones plantilla `swap`, `min` y `max`. Se pueden usar con cualquier tipo que soporte operadores de comparación. `swap` intercambia valores, `min` devuelve el menor (si son iguales, devuelve el segundo), `max` devuelve el mayor (si son iguales, devuelve el segundo). Todo en header files. |
+| 🔧 **ex01** | Iter | Función plantilla `iter` que recibe un array, su tamaño y una función. Aplica la función a cada elemento del array. Funciona con cualquier tipo de array y permite argumentos por referencia const o no const según el contexto. |
+| 🗂️ **ex02** | Array | Clase plantilla `Array<T>` con: construcción vacía o con tamaño `n` inicializado por defecto, copia profunda (copy constructor y operator=), acceso con `[ ]` que lanza `std::exception` si el índice está fuera de rango, y función miembro `size()` que devuelve el número de elementos. Debe usar `new[]` para asignación dinámica y evitar memoria no asignada. |
+

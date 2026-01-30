@@ -1,6 +1,14 @@
-# 🎯 C++ Modules - 42 Madrid
+<div align="center">
 
-> Mis soluciones a los ejercicios de C++98, desde los fundamentos hasta la STL avanzada
+# 🎯 C++ Modules
+
+### *Mis soluciones a los ejercicios de C++98 - De fundamentos a STL avanzada*
+
+[![42 School](https://img.shields.io/badge/42-Madrid-000000?style=for-the-badge&logo=42)](https://42madrid.com)
+[![Language](https://img.shields.io/badge/C++-98-00599C?style=for-the-badge&logo=cplusplus)](https://isocpp.org/)
+[![Norminette](https://img.shields.io/badge/Norminette-Passing-success?style=for-the-badge)](https://github.com/42School/norminette)
+
+</div>
 
 ---
 

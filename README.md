@@ -1,88 +1,584 @@
-# 🧩 C++ - Módulo 00
+# 🎯 C++ Modules - 42 Madrid
 
-**Tema:** namespaces, clases, funciones miembro, iostream, listas de inicialización, static, const.  
-**Norma:** C++98 – sin printf, malloc/free, using namespace, STL (hasta módulo 08).
-
-| Ejercicio | Nombre | Descripción |
-|-----------|--------|-------------|
-| 📣 **ex00** | Megaphone | Programa que imprime los argumentos en mayúsculas.<br>- Sin argumentos: "* LOUD AND UNBEARABLE FEEDBACK NOISE *" |
-| 📒 **ex01** | My Awesome PhoneBook | Agenda con 8 contactos máx.<br>- ADD: añadir contacto (campos no vacíos)<br>- SEARCH: lista formateada + ver detalles por índice<br>- EXIT: salir |
+> Mis soluciones a los ejercicios de C++98, desde los fundamentos hasta la STL avanzada
 
 ---
 
-# 🧩 C++ - Módulo 01  
-**Temas:** Memoria dinámica, referencias y punteros a miembros  
+## 📚 Módulos
 
-| Ejercicio | Nombre | Descripción |
-|-----------|--------|-------------|
-| 🧟 **ex00** | BraiiiiiiinnnzzzZ | Clase `Zombie` con método `announce()`. Crea zombies en **heap** o **stack**. Practica `new`, `delete` y destructores. |
-| 🧟‍♂️ **ex01** | Moar brainz! | Función `zombieHorde(int N, std::string name)` que crea **N zombies** en una sola reserva de memoria. Manejo de `new[]` y `delete[]`. |
-| 🧠 **ex02** | HI THIS IS BRAIN | Muestra direcciones y valores de una `std::string`, un puntero y una referencia. Comparación de su comportamiento. |
-| ⚔️ **ex03** | Unnecessary violence | Clases `Weapon`, `HumanA` (usa referencia) y `HumanB` (usa puntero). Demuestra diferencias entre referencias y punteros. |
-| 📝 **ex04** | Sed is for losers | Reemplaza todas las apariciones de una cadena por otra en un archivo y guarda el resultado en `<filename>.replace`. Sin `std::string::replace`. |
-| 😡 **ex05** | Harl 2.0 | Clase `Harl` con niveles (`DEBUG`, `INFO`, `WARNING`, `ERROR`). Usa **punteros a funciones miembro** en lugar de `if/else` anidados. |
-| 🎚️ **ex06** | Harl filter | Filtra los mensajes de `Harl` desde un nivel dado hacia arriba usando `switch`. |
-
----
-# 🧩 C++ - Módulo 02
-
-**Tema:** Polimorfismo ad-hoc, sobrecarga de operadores y forma canónica ortodoxa.
-
-| Ejercicio | Nombre | Descripción |
-|-----------|--------|-------------|
-| **ex00** | Fixed | Clase `Fixed` básica con constructor, copia, asignación y destructor.<br>Guarda un número fijo con 8 bits fraccionales. |
-| 🔢 **ex01** | Fixed con float/int | Añade constructores para int y float, convierte Fixed a float/int,<br>y sobrecarga operador `<<` para imprimir. |
-| ➕ **ex02** | Operadores sobrecargados | Sobrecarga operadores de comparación y aritméticos,<br>pre/post incremento/decremento. Métodos estáticos `min` y `max`. |
-
----
-# 🧩 C++ - Módulo 03
-**Tema:** Herencia, clases derivadas y múltiples herencias.  
-
-| Ejercicio | Nombre | Descripción |
-|-----------|--------|-------------|
-| 🤖 **ex00** | Aaaaand... OPEN! | Clase `ClapTrap` con atributos `name`, `hit points`, `energy points` y `attack damage`. Métodos: `attack()`, `takeDamage()`, `beRepaired()`. Práctica de constructores, destructores y mensajes por consola. |
-| 🛡️ **ex01** | Serena, my love! | Clase `ScavTrap` que hereda de `ClapTrap`. Hit points y energy points distintos. Añade método especial `guardGate()` y muestra mensajes distintos de construcción y ataque. |
-| 💥 **ex02** | Repetitive work | Clase `FragTrap` que hereda de `ClapTrap`. Hit points y energy points aumentados. Añade método especial `highFivesGuys()` y mensajes propios de construcción/ataque. |
-| 💎 **ex03** | Now it’s weird! | Clase `DiamondTrap` que hereda de **FragTrap** y **ScavTrap**. Mezcla atributos y métodos de ambos padres, añade método especial `whoAmI()` que muestra su nombre y el de ClapTrap. Maneja correctamente la creación de la instancia ClapTrap única. |
-
-# 🧩 C++ - Módulo 04
-**Tema:** Polimorfismo por subtipos, clases abstractas e interfaces.  
-
-| Ejercicio | Nombre | Descripción |
-|-----------|--------|-------------|
-| 🐶🐱 **ex00** | Polymorphism | Clase base `Animal` con atributo protegido `type` y método virtual `makeSound()`. Clases derivadas `Dog` y `Cat` implementan sonidos específicos. Incluye `WrongAnimal` y `WrongCat` para demostrar el error al no usar funciones virtuales. |
-| 🧠 **ex01** | I don’t want to set the world on fire | Implementa clase `Brain` con array de 100 `std::string`. `Dog` y `Cat` contienen un `Brain*` privado. Se gestionan con `new`/`delete`. Se prueban destructores correctos, gestión de memoria y **deep copy**. |
-| 🚫 **ex02** | Abstract class | La clase `Animal` ya no debe poder instanciarse directamente. Se convierte en clase abstracta, asegurando que solo clases derivadas (`Dog`, `Cat`) puedan usarse. |
+- [00 - Fundamentos](#-módulo-00---fundamentos)
+- [01 - Gestión de Memoria](#-módulo-01---gestión-de-memoria)
+- [02 - Sobrecarga de Operadores](#-módulo-02---sobrecarga-de-operadores)
+- [03 - Herencia](#-módulo-03---herencia)
+- [04 - Polimorfismo](#-módulo-04---polimorfismo)
+- [05 - Excepciones](#️-módulo-05---excepciones)
+- [06 - Conversión de Tipos](#-módulo-06---conversión-de-tipos)
+- [07 - Templates](#-módulo-07---templates)
+- [08 - STL Básica](#-módulo-08---stl-básica)
+- [09 - STL Avanzada](#-módulo-09---stl-avanzada)
 
 ---
 
-# 🧩 C++ - Módulo 05  
-**Tema:** Excepciones, clases abstractas, herencia y control de acceso.
+## 🌟 Módulo 00 - Fundamentos
 
-| Ejercicio | Nombre | Descripción |
-|-----------|--------|-------------|
-| 🧑‍💼 **ex00** | Bureaucrat | Clase `Bureaucrat` con `name` constante y `grade` (1 = más alto, 150 = más bajo). Implementa incremento/decremento de grado con **excepciones** (`GradeTooHighException`, `GradeTooLowException`). Introduce `try`, `throw` y `catch` heredando de `std::exception`. |
-| 📝 **ex01** | Form | Clase `Form` que puede ser firmada por un `Bureaucrat` si su grado es suficiente. Practica el uso de **atributos const**, validación de rangos y manejo de excepciones. Relación entre clases sin herencia. |
-| 📄 **ex02** | AForm | Versión abstracta de `Form`. Introduce **clases abstractas** y **polimorfismo**. Implementa `execute()` con comprobaciones comunes y formularios concretos con comportamiento específico. |
-| 🏭 **ex03** | Intern | Clase fábrica `Intern` que crea formularios dinámicamente según un nombre. Practica el **factory pattern**, uso de punteros a la clase base `AForm` y manejo de errores cuando el formulario no existe. |
+**Conceptos:** `namespaces` · `clases` · `iostream` · `static` · `const`  
+**Norma:** C++98 (sin printf, malloc/free, using namespace, STL)
 
-# 🧩 C++ - Módulo 06  
-**Tema:** Casts en C++, conversión de tipos, RTTI y serialización.  
-Norma: C++98.
+<table>
+<tr>
+<td width="50%">
 
-| Ejercicio | Nombre | Descripción |
-|-----------|--------|-------------|
-| 🔢 **ex00** | Scalar Converter | Clase no instanciable `ScalarConverter` con un método estático `convert()` que recibe un literal en forma de `string` y lo convierte a `char`, `int`, `float` y `double`. Maneja **pseudo-literales** (`nan`, `inf`, `-inf`, con y sin `f`), conversiones imposibles y valores no imprimibles. Practica detección de tipos y **casts explícitos**. |
-| 🔐 **ex01** | Serialization | Clase estática `Serializer` que convierte un puntero a un entero (`uintptr_t`) y viceversa. Introduce la **serialización básica**, el uso de `reinterpret_cast` y la diferencia entre representación y valor. Incluye una estructura `Data` no vacía para las pruebas. |
-| 🧬 **ex02** | Identify real type | Jerarquía con una clase base `Base` y clases derivadas `A`, `B` y `C`. Implementa funciones que identifican el tipo real del objeto usando **`dynamic_cast`** con punteros y referencias, sin `typeid`. Demuestra **RTTI**, polimorfismo y la necesidad de un destructor virtual en la clase base. |
+### 📣 Megaphone
+Programa que convierte argumentos a mayúsculas.
 
-# 🧩 C++ - Módulo 07  
-**Tema:** Templates en C++  
-Norma: C++98 – sin printf, malloc/free, using namespace, STL (hasta módulo 08).  
+**Características:**
+- Lee argumentos desde la línea de comandos
+- Convierte todo a UPPERCASE
+- Sin args: `"* LOUD AND UNBEARABLE FEEDBACK NOISE *"`
 
-| Ejercicio | Nombre | Descripción |
-|-----------|--------|-------------|
-| 🔄 **ex00** | Start with a few functions | Implementa funciones plantilla `swap`, `min` y `max`. Se pueden usar con cualquier tipo que soporte operadores de comparación. `swap` intercambia valores, `min` devuelve el menor (si son iguales, devuelve el segundo), `max` devuelve el mayor (si son iguales, devuelve el segundo). Todo en header files. |
-| 🔧 **ex01** | Iter | Función plantilla `iter` que recibe un array, su tamaño y una función. Aplica la función a cada elemento del array. Funciona con cualquier tipo de array y permite argumentos por referencia const o no const según el contexto. |
-| 🗂️ **ex02** | Array | Clase plantilla `Array<T>` con: construcción vacía o con tamaño `n` inicializado por defecto, copia profunda (copy constructor y operator=), acceso con `[ ]` que lanza `std::exception` si el índice está fuera de rango, y función miembro `size()` que devuelve el número de elementos. Debe usar `new[]` para asignación dinámica y evitar memoria no asignada. |
+**Implementa:**
+- Uso básico de `iostream`
+- Manipulación de strings en C++
+- Funciones de transformación
 
+</td>
+<td width="50%">
+
+### 📒 PhoneBook
+Una agenda con capacidad limitada.
+
+**Características:**
+- Máximo 8 contactos
+- Comando `ADD`: nuevo contacto
+- Comando `SEARCH`: lista + detalles
+- Comando `EXIT`: salir del programa
+- Campos obligatorios (no vacíos)
+
+**Implementa:**
+- Clases y atributos privados
+- Arrays de objetos
+- Validación de entrada
+- Formateo de salida
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🧠 Módulo 01 - Gestión de Memoria
+
+**Conceptos:** Memoria dinámica · Referencias · Punteros a miembros
+
+<table>
+<tr>
+<td width="33%">
+
+### 🧟 BraiiiiiiinnnzzzZ
+Clase `Zombie` básica.
+
+**Reto:** Crear zombies tanto en **stack** como en **heap** y entender cuándo usar cada uno.
+
+**Solución incluye:**
+- Operador `new` y `delete`
+- Destructores automáticos
+- Gestión de memoria
+
+</td>
+<td width="33%">
+
+### 🧟‍♂️ Moar brainz!
+Horda de zombies.
+
+**Reto:** Crear N zombies con una sola asignación de memoria.
+
+**Función clave:**
+```cpp
+Zombie* zombieHorde(int N, std::string name)
+```
+
+**Solución incluye:**
+- Arrays dinámicos (`new[]`)
+- Liberación correcta (`delete[]`)
+
+</td>
+<td width="33%">
+
+### 🧠 HI THIS IS BRAIN
+Punteros vs Referencias.
+
+**Muestra:**
+- Direcciones de memoria
+- Valores almacenados
+- Diferencias fundamentales
+
+**Conceptos:**
+- `std::string str`
+- `std::string* ptr`
+- `std::string& ref`
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="33%">
+
+### ⚔️ Unnecessary violence
+Sistema de combate simple.
+
+**Clases:**
+- `Weapon` - arma modificable
+- `HumanA` - usa **referencia** (siempre tiene arma)
+- `HumanB` - usa **puntero** (arma opcional)
+
+**Demuestra la diferencia crucial entre referencias y punteros**
+
+</td>
+<td width="33%">
+
+### 📝 Sed is for losers
+Reemplazo de texto en archivos.
+
+**Funcionalidad:**
+- Lee archivo de entrada
+- Reemplaza todas las ocurrencias
+- Guarda en `<filename>.replace`
+
+**Restricción:** Sin usar `std::string::replace`
+
+</td>
+<td width="33%">
+
+### 😡 Harl 2.0 + 🎚️ Filter
+Sistema de logging con niveles.
+
+**Niveles:**
+- `DEBUG` 🐛
+- `INFO` ℹ️
+- `WARNING` ⚠️
+- `ERROR` ❌
+
+**Técnica:** Punteros a funciones miembro (sin if/else anidados)
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🔢 Módulo 02 - Sobrecarga de Operadores
+
+**Conceptos:** Polimorfismo ad-hoc · Forma canónica ortodoxa · Punto fijo
+
+### 📊 Evolución de la clase Fixed
+
+```
+Fixed básico  →  Fixed con conversiones  →  Fixed con operadores completos
+   (ex00)              (ex01)                      (ex02)
+```
+
+<table>
+<tr>
+<td width="33%">
+
+**ex00: Fundamentos**
+- Constructor por defecto
+- Constructor de copia
+- Operador de asignación
+- Destructor
+- Valor fijo (8 bits fraccionarios)
+
+</td>
+<td width="33%">
+
+**ex01: Conversiones**
+- Constructor desde `int`
+- Constructor desde `float`
+- Conversión a `float`
+- Conversión a `int`
+- Sobrecarga de `<<`
+
+</td>
+<td width="33%">
+
+**ex02: Operadores**
+- Comparación: `>` `<` `>=` `<=` `==` `!=`
+- Aritméticos: `+` `-` `*` `/`
+- Incremento: `++i` `i++`
+- Decremento: `--i` `i--`
+- Estáticos: `min()` `max()`
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🤖 Módulo 03 - Herencia
+
+**Conceptos:** Clases derivadas · Herencia múltiple · Problema del diamante
+
+### 🔄 Jerarquía de Clases
+
+```
+                    ClapTrap
+                   /        \
+              ScavTrap    FragTrap
+                   \        /
+                  DiamondTrap
+```
+
+| Clase | HP | Energy | Damage | Habilidad especial |
+|-------|-------|---------|--------|-------------------|
+| 🤖 **ClapTrap** | 10 | 10 | 0 | `attack()` · `takeDamage()` · `beRepaired()` |
+| 🛡️ **ScavTrap** | 100 | 50 | 20 | `guardGate()` - modo guardián |
+| 💥 **FragTrap** | 100 | 100 | 30 | `highFivesGuys()` - high five positivo |
+| 💎 **DiamondTrap** | 100 | 50 | 30 | `whoAmI()` - identidad dual |
+
+**Reto del ex03:** Resolver el problema del diamante con herencia virtual
+
+---
+
+## 🐾 Módulo 04 - Polimorfismo
+
+**Conceptos:** Clases abstractas · Interfaces · Virtual · Deep copy
+
+### 🧬 Sistema de Animales
+
+<table>
+<tr>
+<td width="50%">
+
+**ex00 - ex01: Polimorfismo básico**
+
+```cpp
+Animal* animals[4];
+animals[0] = new Dog();
+animals[1] = new Cat();
+```
+
+**Características:**
+- Clase base `Animal` con `makeSound()` virtual
+- Clase `Brain` con 100 ideas
+- Deep copy en constructores de copia
+- Destructores virtuales
+
+</td>
+<td width="50%">
+
+**ex02: Clase abstracta**
+
+```cpp
+// Animal ya NO se puede instanciar
+Animal* a = new Animal(); // ❌ Error
+Animal* d = new Dog();    // ✅ OK
+```
+
+**Conversión a abstracta:**
+- `makeSound()` = función virtual pura
+- Solo instancias de clases derivadas
+
+</td>
+</tr>
+</table>
+
+**Contraste con WrongAnimal:** Demuestra qué pasa sin funciones virtuales
+
+---
+
+## ⚠️ Módulo 05 - Excepciones
+
+**Conceptos:** try-catch · throw · std::exception · Factory pattern
+
+### 🏢 Sistema Burocrático
+
+<table>
+<tr>
+<td width="50%">
+
+#### Jerarquía de clases
+
+```
+    Bureaucrat
+        |
+      Form (ex01)
+        |
+     AForm (ex02)
+    /  |  \
+   /   |   \
+Shrubbery Presidential RobotomyRequest
+```
+
+</td>
+<td width="50%">
+
+#### Sistema de rangos
+
+| Rango | Significado |
+|-------|-------------|
+| 1 | 🏆 Máximo poder |
+| 75 | Firmar formularios básicos |
+| 150 | 📊 Mínimo poder |
+| 0 o >150 | ⚠️ Excepción |
+
+</td>
+</tr>
+</table>
+
+**ex00:** Burocrático simple con excepciones de rango  
+**ex01:** Formularios que requieren firma  
+**ex02:** Formularios abstractos con ejecución  
+**ex03:** Becario (Intern) como factory de formularios
+
+---
+
+## 🔄 Módulo 06 - Conversión de Tipos
+
+**Conceptos:** Casts · RTTI · Serialización · type detection
+
+<table>
+<tr>
+<td width="33%">
+
+### 🔢 ScalarConverter
+Conversión de literales.
+
+**Entrada:** `string` literal  
+**Salida:** `char`, `int`, `float`, `double`
+
+**Maneja:**
+- Números normales
+- Pseudo-literales (`nan`, `inf`, `-inff`)
+- Casos imposibles
+- No imprimibles
+
+**Cast:** Explícito según tipo
+
+</td>
+<td width="33%">
+
+### 🔐 Serializer
+Serialización de punteros.
+
+**Funciones:**
+```cpp
+uintptr_t serialize(Data* ptr)
+Data* deserialize(uintptr_t raw)
+```
+
+**Concepto:**
+- Conversión puntero ↔ entero
+- `reinterpret_cast`
+- Diferencia representación/valor
+
+</td>
+<td width="33%">
+
+### 🧬 Identify type
+Identificación en tiempo de ejecución.
+
+**Jerarquía:**
+```
+Base
+ ├─ A
+ ├─ B
+ └─ C
+```
+
+**Técnica:** `dynamic_cast`
+- Con punteros
+- Con referencias
+- Sin usar `typeid`
+
+</td>
+</tr>
+</table>
+
+---
+
+## 📐 Módulo 07 - Templates
+
+**Conceptos:** Funciones template · Clases template · Genericidad
+
+<table>
+<tr>
+<td width="33%">
+
+### 🔄 Funciones básicas
+
+**Implementar:**
+```cpp
+template<typename T>
+void swap(T& a, T& b)
+
+template<typename T>
+T min(T a, T b)
+
+template<typename T>
+T max(T a, T b)
+```
+
+**Regla:** Si son iguales, devolver el segundo
+
+</td>
+<td width="33%">
+
+### 🔧 Función iter
+
+**Prototipo:**
+```cpp
+template<typename T>
+void iter(T* array, 
+          size_t len, 
+          void (*f)(T&))
+```
+
+**Aplica una función a cada elemento del array**
+
+</td>
+<td width="33%">
+
+### 🗂️ Clase Array
+
+**Características:**
+- Constructor vacío y con tamaño
+- Deep copy automática
+- Operador `[]` con bounds checking
+- Función `size()`
+- Excepción si índice inválido
+
+</td>
+</tr>
+</table>
+
+---
+
+## 📦 Módulo 08 - STL Básica
+
+**Conceptos:** Contenedores · Iteradores · Algoritmos estándar
+
+<table>
+<tr>
+<td width="33%">
+
+### 🔍 easyfind
+
+**Objetivo:** Encontrar un entero en un contenedor.
+
+**Uso:**
+```cpp
+std::vector<int> v;
+easyfind(v, 42);
+```
+
+**Requiere:**
+- Template genérico
+- `std::find`
+- Manejo de "no encontrado"
+
+</td>
+<td width="33%">
+
+### 📏 Span
+
+**Almacena N enteros con límite.**
+
+**Métodos:**
+- `addNumber(int)`
+- `addRange(iter, iter)`
+- `shortestSpan()`
+- `longestSpan()`
+
+**Optimizado para grandes volúmenes**
+
+</td>
+<td width="33%">
+
+### 🧬 MutantStack
+
+**Stack iterable.**
+
+**Hereda de:** `std::stack<T>`
+
+**Añade:**
+- `begin()` / `end()`
+- `rbegin()` / `rend()`
+
+**Se comporta como stack pero permite recorrido**
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🚀 Módulo 09 - STL Avanzada
+
+**Conceptos:** Contenedores avanzados · Algoritmos complejos · Optimización
+
+<table>
+<tr>
+<td width="33%">
+
+### ₿ Bitcoin Exchange
+
+**Entrada:** Archivo con `date | value`
+
+**Funcionalidad:**
+- Valida fechas (YYYY-MM-DD)
+- Valida valores (0-1000)
+- Busca fecha más cercana en DB
+- Calcula valor BTC
+
+**Contenedor recomendado:** `std::map`
+
+</td>
+<td width="33%">
+
+### 🧮 RPN Calculator
+
+**Notación polaca inversa**
+
+**Ejemplo:**
+```
+Input:  "3 4 + 2 *"
+Output: 14
+```
+
+**Restricciones:**
+- Operandos < 10
+- Operadores: + - * /
+- Sin decimales
+
+**Contenedor recomendado:** `std::stack`
+
+</td>
+<td width="33%">
+
+### ⚡ PmergeMe
+
+**Algoritmo:** Ford-Johnson (merge-insert)
+
+**Requisitos:**
+- Ordena ≥3000 números
+- Dos implementaciones (dos contenedores)
+- Mide tiempos de ejecución
+- Compara eficiencia
+
+**Enfoque:** Optimización y complejidad
+
+</td>
+</tr>
+</table>
+
+---
+
+<div align="center">
+
+### 🌟 42 Madrid - C++ Modules
+
+**Norma C++98** · **Orthodox Canonical Form** · **No STL hasta Módulo 08**
+
+</div>
